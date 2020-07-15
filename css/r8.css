@@ -1,0 +1,91 @@
+.right .r8
+{
+    background: rgba(36, 65, 147, 1);
+    background-image: url('../img/abc.png');
+    background-size: 100px;
+    background-position-x: 1040px;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 690px;
+    display: none;
+}
+
+.right #container4
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 50px 50px;
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.right .r8 form label
+{
+    font-size: 22px;
+    color: #000;
+}
+
+.right .r8 select
+{
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    height: 30px;
+    font-size: large;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.right .r8 form input
+{
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.right .r8 form input:focus
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.right .r8 form button
+{
+    padding: 12px 10px;
+    width: 200px;
+    font-size: 16px;
+    background-color: rgba(46, 139, 87, 1);
+    border: 0px;
+    color: white;
+    opacity: 0.5;
+}
+
+.right .r8 form button:hover
+{
+    opacity: 1;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    font-weight: bold;
+}
+
+/* The Close Button */
+.r8 .close8 
+{
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -5px;
+    cursor: pointer;
+}    
+  
+.r8 .close6:hover, .close8:focus 
+{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+

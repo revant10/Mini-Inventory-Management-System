@@ -1,0 +1,108 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+*
+{
+    -ms-overflow-style: none;
+}
+
+body
+{
+    background: rgba(36, 65, 147, 0.5);
+    overflow: scroll;
+    /* align-content: center; */
+}
+
+header
+{
+    background-color: rgba(255, 255, 255, 1);
+    align-content: center;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px 1px black;
+    border: 2px solid black;
+    /* display: inline-block; */
+    vertical-align: middle;
+    /* width: 100%; */
+}
+header img
+{
+    height: 60px;
+    width: auto;
+}
+
+nav
+{
+    background-color: rgba(112, 20, 76, 0.7);
+    margin-top: 10px;
+    align-content: center;
+    padding: 0.2px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px 1px #000;
+}
+
+nav ul li
+{
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+header a
+{
+    float: right;
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+header a:hover
+{
+    color: tomato;
+}
+
+.content
+{
+    
+    margin-top: 1%;
+    height: 87vh;
+    border-radius: 10px;
+}
+
+#cancel
+{
+    background-color: rgba(255,0,0,1);
+}
+
+footer
+{
+    margin: 5px;
+    width: auto;
+    /* background-color: whitesmoke; */
+}
+footer h2
+{
+    color: orange;
+    text-shadow: 1px 1px 5px black;
+}
+
+#bal-table
+{
+    background-color:#fff;
+    width: auto;
+}
+
+#bal-table th
+{
+    width: 100px;
+}
+
+#bal-table td
+{
+    width: 150px;
+}

@@ -1,0 +1,47 @@
+.right .r3
+{
+    background: rgba(36, 65, 147, 1);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding: 10px;
+    height: 605px;
+    display: block;
+    position: static;
+    display: none;
+    z-index: 100;
+}
+
+.right .r3 table
+{
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #fff;
+    padding: 5px;
+    width: 100%;
+    overflow: scroll;
+    /* height: 550px; */
+}
+
+.r3 table td
+{
+    
+    
+    text-align: center;
+    font-size: 18px;
+    /* border: 1px solid black; */
+}
+
+.r3 table tr:hover
+{
+    background-color: #ccc;
+}
+
+.r3 table th
+{
+    
+    text-align: center;
+    /* border: 1px solid black; */
+    position: sticky;
+    background-color: #aaa;
+    color: black;
+}

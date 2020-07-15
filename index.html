@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+    <head>
+
+        <script src="js/jquery.js"></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/left.css">
+        <link rel="stylesheet" type="text/css" href="css/right.css">
+        <link rel="stylesheet" type="text/css" href="css/r1.css">
+        <link rel="stylesheet" type="text/css" href="css/r2.css">
+        <link rel="stylesheet" type="text/css" href="css/r3.css">
+        <link rel="stylesheet" type="text/css" href="css/r4.css">
+        <link rel="stylesheet" type="text/css" href="css/r5.css">
+        <link rel="stylesheet" type="text/css" href="css/r6.css">
+        <link rel="stylesheet" type="text/css" href="css/r8.css">
+        <link rel="stylesheet" type="text/css" href="css/r10.css">
+        <link rel="stylesheet" type="text/css" href="css/r11.css">
+        <link rel="stylesheet" type="text/css" href="css/r14.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <!--CSS-->
+
+        
+        
+        <!--Favicon Material-->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--Favicon Material-->
+
+        <title>
+            Everest Elevator Buckets
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <img src="img/logo.png">
+            <a href="../index.html"><i style="font-size:32px;"><b>#</b></i></a>
+        </header>
+
+        <div class="content">
+
+            <div class="left">
+                <center>
+                    <footer>
+                        <h2><b>V. L. Industrial Works</b></h2>
+                    </footer>
+                </center>
+                <div class="l" id="l">
+                    <div class="l1" id="l1">
+                        <form name="f1" action="php/tableExcel.php" method="POST">
+                            <select id="btype" name="btype" onchange="view()">
+                                <option value="" selected disabled>Select Bucket Type</option>
+                            </select>
+                            <br><br>
+                            <select id="type" name="type" disabled onchange="enButton()">
+                                <option value="" selected disabled>Select Bucket</option>
+                            </select>
+                            <input type="text" id="h1" name="database" hidden>
+                            <input type="text" id="h2" name="table" hidden>
+                            <br>
+                            <center>
+                                <table border="0" id="buttons">
+                                    <tr>
+                                        <td>
+                                            <button type="button" id="b1" class="button" value="View Entries" onclick="dispTable()" disabled>View Entries</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" id="b2" class="button" value="Add Entry" disabled onclick="addEntry()">Add Entry</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button" id="b3" class="button" value="Modify Entry" disabled onclick="modifyEntry()">Modify Entry</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" id="e2E" class="button" value="dView" onclick="dView()" disabled>Detailed View</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+                        </form>   
+                    </div>
+                    <hr style="width: 95%;">
+                    <div class="l2" id="l2">
+                        <center>
+                            <button id="b4" name="b4" onclick="addBtype()">Add Bucket Type</button>
+                            <br>
+                            <button id="b5" name="b5" onclick="addBucket()">Add Bucket</button>
+                            <br>
+                            <button id="b6" name="b6" onclick="vTrans()">View Transactions</button>
+                            <br>
+                            <button id="b7" name="b7" onclick="vStock()">View Inventory</button>
+                        </center>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="right">
+                <div class="r1" id="r1"></div>
+
+                <div class="r2" id="r2">
+                    <center>
+                        <div id="container1">
+                            <form name="f2" id="f2">
+                                <span class="close" id="close">&times;</span>
+                                <br><br><br>
+                                <center>
+                                    <table border="0" cellspacing='5px'>
+                                        <tr>
+                                            <td><label for="BucketType">Date</label></td>
+                                            <td><input type="date" id="date" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Order Quantity">Order Quantity</label></td>
+                                            <td><input type="number" min="0" id="order-q" value="0" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Challan Number">Challan No</label></td>
+                                            <td><input type="text" id="challan-no" placeholder="Challan No." value="N.A." required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Incoming Quantity">Incoming Quantity</label></td>
+                                            <td><input type="number" min="0" id="in-q" value="0" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Outgoing Quantity">Outgoing Quantity</label></td>
+                                            <td><input type="number" min="0" id="out-q" value="0" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Rejected Quantity">Rejected Quantity</label></td>
+                                            <td><input type="number" min="0" id="reject-q" value="0" required></td>
+                                        </tr>
+                                    </table>
+                                    <br><br>
+                                    <div id="entryB">
+                                        <button type="reset" class="cancel" id="cancel">Reset</button>
+                                        <button type="button" id="save-entry">Save</button>
+                                    </div>
+                                </center>
+                            </form>
+                        </div>
+                    </center>
+                    <div class="r3" id="r3"></div>
+                </div>
+                
+
+                <div class="r4" id="r4">
+                    <div id="container2">
+                        
+                            <span class="close" id="close2">&times;</span>
+                            <form class="f3" id="f3" name="f3">
+                                <table border="0" cellspacing='5px'>
+                                    <tr>
+                                        <td><label for="Serial Number">Serial No :</label></td>
+                                        <td><input type="text" id="srno" placeholder="Sr. No." required></td>
+                                        <td><button type="button" id="search-entry" style="width: 70px; padding: 5px;">Search</button></td>
+                                    </tr>
+                                </table>
+                                
+                            </form>
+                        
+                    </div>
+                    <div class="r5" id="r5"></div>
+                    <br><button type="button" id="modify-entry" hidden>Save</button>
+                </div>
+
+                <center>
+                    <div class="r6" id="r6">
+                        <div id="container3">
+                            <form name="f4" id="f4">
+                                <span class="close6" id="close6">&times;</span>
+                                <br><br><br>
+                                <center>
+                                    <label for="BucketType">Bucket Type :</label>
+                                    <br>
+                                    <input type="text" placeholder='e.g. C-Type' id="schema">
+                                    <br><br>
+                                    <button type="button" id="create-btype" name="b7" onclick="appendBtype()">Save</button>
+                                </center>
+                            </form>
+                            <div class="r7" id="r7"></div>
+                        </div>
+                    </div>
+                    
+                </center>
+
+                <div class="r8" id="r8">
+                    <center>
+                        <div id="container4">
+                            <form name="f5" id="f5">
+                                <span class="close8" id="close8">&times;</span>
+                                <br><br><br>
+                                <center>
+                                    <table border="0" cellspacing = '5px'>
+                                        <tr>
+                                            <td><label for="BucketType">Bucket Type :</label></td>
+                                            <td><select id="schema2" name="schema2" required></select></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Bucket">Bucket Name :</label></td>
+                                            <td><input type="text" id="table" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Balance">Opening Balance :</label></td>
+                                            <td><input type="number" id="o-balance" required value="0" placeholder="Opening Balance"></td>
+                                        </tr>
+                                    </table>
+                                    <br><br>
+                                    <button type="button" id="create-bucket" name="b8">Save</button>
+                                </center>
+                            </form>
+                            <div class="r9" id="r9"></div>
+                        </div>
+                    </center>
+                </div>
+                    
+                <div class="r10" id="r10">
+                    <div id="container5">
+                        <span class="close10" id="close10">&times;</span>
+                        <form id="f6">
+                            <label for="sDate">From :</label>
+                            &nbsp;
+                            <input type="date" name="sDate" id="sDate" onchange="enDate()" required>
+                            &nbsp;&nbsp;&nbsp;
+                            <label for="eDate">To :</label>
+                            &nbsp;
+                            <input type="date" name="eDate" id="eDate" onchange="enGo()" required disabled>
+                            &nbsp;&nbsp;
+                            <button type="button" id="sTran" disabled>&rarr;</button>
+                        </form>
+                            <!-- </table>
+                            <br><br>
+                            <button type="button" name="view" id="view" onclick="dispTable()" >View Transactions</button>
+                            &nbsp;&nbsp;
+                            <button type="submit" name="export" id="export">Export to Excel</button>
+                        </form> -->
+                    </div>
+                    <hr>
+                    <div class="r13" id="r13"></div>
+                </div>
+                
+                <div class="r11" id="r11">
+                    <div id="container6">
+                        <span class="close11" id="close11">&times;</span>
+                        <form id='f7'>
+                            <select id="btype1" name="btype1">
+                                <option value="" selected disabled>Select Bucket Type</option>
+                            </select>
+                        </form>
+                        
+                    </div>
+                    <hr>
+                    <div class="r12" id="r12"></div>
+                </div>
+
+                <div class="r14" id="r14">
+                    <div id="container7">
+                        <span class="close14" id="close14">&times;</span>
+                        <form id="f8">
+                            <label for="sDate">From :</label>
+                            &nbsp;
+                            <input type="date" name="SDate" id="SDate" onchange="endate()" required>
+                            &nbsp;&nbsp;&nbsp;
+                            <label for="eDate">To :</label>
+                            &nbsp;
+                            <input type="date" name="EDate" id="EDate" onchange="engo()" required disabled>
+                            &nbsp;&nbsp;
+                            <button type="button" id="STran" disabled>&rarr;</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="r15" id="r15"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- <center>
+            <footer>
+                <h2><b>V. L. Industrial Works</b></h2>
+            </footer>
+        </center> -->
+
+    </body>
+</html>
+
+<!--JS-->
+<script type="text/javascript" src="js/bucket.js"></script>
+
+<!--JS-->
+
+
+<script>
+    // Get the <span> element that closes the modal
+    var span = document.getElementById("close");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() 
+    {
+        var r2 = document.getElementById('r2');
+        var r4 = document.getElementById('r4');
+        r2.style.display = "none";
+        r4.style.display = "none";
+    }
+
+    var span = document.getElementById("close2");
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() 
+    {
+        var r1 = document.getElementById('r1');
+        var r4 = document.getElementById('r4');
+        var r5 = document.getElementById('r5');
+        r1.style.display = "none";
+        r4.style.display = "none";
+        r5.style.display = "none";
+    }
+
+    var span = document.getElementById("close6");
+    span.onclick = function() 
+    {
+        var r6 = document.getElementById('r6');
+        r6.style.display = "none";
+    }
+
+    var span = document.getElementById("close8");
+    span.onclick = function() 
+    {
+        var r8 = document.getElementById('r8');
+        r8.style.display = "none";
+    }
+
+    var span = document.getElementById("close10");
+    span.onclick = function() 
+    {
+        var r10 = document.getElementById('r10');
+        r10.style.display = "none";
+    }
+
+    var span = document.getElementById("close11");
+    span.onclick = function() 
+    {
+        var r11 = document.getElementById('r11');
+        r11.style.display = "none";
+    }
+
+    var span = document.getElementById("close14");
+    span.onclick = function() 
+    {
+        var r14 = document.getElementById('r14');
+        r14.style.display = "none";
+    }
+
+</script>    

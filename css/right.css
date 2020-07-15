@@ -1,0 +1,12 @@
+.right
+{
+    width: 74.75%;
+    float: right;
+    height: inherit;
+    background: rgba(36, 65, 147, 1);
+    background-image: url('../img/abc.png');
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}

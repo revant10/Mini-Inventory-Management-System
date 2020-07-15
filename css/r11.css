@@ -1,0 +1,141 @@
+.right .r11
+{
+    background: rgba(36, 65, 147, 1);
+    background-image: url('../img/abc.png');
+    background-size: 100px;
+    background-position-x: 1040px;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 670px;
+    display: none;
+    padding: 5px;
+}
+
+.right .r11 #container6
+{
+    width: 300px;
+    padding: 15px;
+}
+
+.right .r11 form label
+{
+    font-size: 22px;
+    color: #000;
+}
+
+.r11 table th
+{
+    text-align: left;
+}
+
+.right .r11 select
+{
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 10px;
+    text-align: center;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.right .r11 form input
+{
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1px dashed black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.right .r11 form input:focus
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.right .r11 form button
+{
+    padding: 12px 10px;
+    width: 200px;
+    font-size: 16px;
+    background-color: rgba(46, 139, 87, 1);
+    border: 0px;
+    color: white;
+    opacity: 0.5;
+}
+
+.right .r11 form button:hover
+{
+    opacity: 1;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    font-weight: bold;
+}
+
+/* The Close Button */
+.r11 .close11 
+{
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}    
+  
+.r11 .close11:hover, .close11:focus 
+{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.right .r12 table
+{
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #fff;
+    padding: 5px;
+    width: 100%;
+    /* height: 550px; */
+    text-align: center;
+    font-size: 18px;
+}
+.right .r12 table tr:nth-child(odd) 
+{
+    background: #eee
+}
+
+.right .r12 #table-v
+{
+    height: 600px;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
+.r12 table td
+{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 1px;
+}
+
+.r12 table tr:hover, .right .r12 table tr:nth-child(odd):hover
+{
+    background-color: #ccc;
+}
+
+.r12 table th
+{
+    
+    text-align: center;
+    /* border: 1px solid black; */
+    position: sticky;
+    background-color: #aaa;
+    color: black;
+    padding: 5px 1px;
+}
